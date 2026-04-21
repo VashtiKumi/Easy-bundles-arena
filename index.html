@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreedataGH Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</head>
+<body>
+   
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <div class="loading-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
+            </div>
+            <div class="loading-text">
+                <h2 id="loading-title">FreedataGH Pro</h2>
+                <p id="loading-subtitle">Initializing premium experience...</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="progress-text">0%</span>
+            </div>
+        </div>
+        <div class="loading-particles"></div>
+    </div>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <span class="brand-text">FreedataGH Pro</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Premium Digital Services</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Get Premium</span>
+                    <span class="title-line gradient-text">Data Bundles</span>
+                    <span class="title-line">Instantly</span>
+                </h1>
+                <p class="hero-description">
+                    Experience lightning-fast data delivery with our premium service. 
+                    Instant activation, 24/7 support, and unbeatable prices for all networks in Ghana.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-count="50000">0</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="99">0</div>
+                        <div class="stat-label">Success Rate %</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Hours Support</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" id="get-started-btn">
+                        <span>Get Started Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary btn-large" id="learn-more-btn">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="screen-content">
+                            <div class="app-header">
+                                <div class="signal-bars">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <span class="network-name">MTN 5G</span>
+                            </div>
+                            <div class="data-usage">
+                                <div class="usage-circle">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="45" class="usage-bg"></circle>
+                                        <circle cx="50" cy="50" r="45" class="usage-fill" id="usage-circle"></circle>
+                                    </svg>
+                                    <div class="usage-text">
+                                        <span class="usage-amount">15.2GB</span>
+                                        <span class="usage-total">of 20GB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-cards">
+                    <div class="floating-card card-1">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Bundle</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube Premium</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Gaming Package</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Services</div>
+                <h2 class="section-title">Premium Digital Solutions</h2>
+                <p class="section-description">
+                    Choose from our wide range of premium services designed to keep you connected
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-network="mtn">
+                    <div class="card-header">
+                        <div class="network-logo mtn-logo">
+                            <span>MTN</span>
+                        </div>
+                        <div class="card-badge">Most Popular</div>
+                    </div>
+                    <h3 class="card-title">MTN Data Bundles</h3>
+                    <p class="card-description">High-speed 4G/5G data bundles with instant activation</p>
+                    <div class="card-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Instant Activation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>30-Day Validity</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>5G Network</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openServiceModal('mtn')">
+                        <span>View Packages</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card" data-network="airteltigo">
+                    <div class="card-header">
+                        <div class="network-logo airteltigo-logo">
+                            <span>AT</span>
+                        </div>
+                    </div>
+                    <h3 class="card-title">AirtelTigo Bundles</h3>
+                    <p class="card-description">Affordable data packages with excellent coverage</p>
+                    <div class="card-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>BigTime Packages</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>iShare Bundles</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Wide Coverage</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openServiceModal('airteltigo')">
+                        <span>View Packages</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card" data-network="telecel">
+                    <div class="card-header">
+                        <div class="network-logo telecel-logo">
+                            <span>TC</span>
+                        </div>
+                    </div>
+                    <h3 class="card-title">Telecel Data</h3>
+                    <p class="card-description">Reliable network with competitive pricing</p>
+                    <div class="card-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Flexible Plans</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Good Coverage</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Fair Pricing</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openServiceModal('telecel')">
+                        <span>View Packages</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card" data-network="streaming">
+                    <div class="card-header">
+                        <div class="network-logo streaming-logo">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="card-badge">Premium</div>
+                    </div>
+                    <h3 class="card-title">Streaming Services</h3>
+                    <p class="card-description">Netflix, Amazon Prime, and more streaming subscriptions</p>
+                    <div class="card-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Netflix Premium</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Amazon Prime</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Disney+ Access</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openServiceModal('streaming')">
+                        <span>View Services</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card" data-network="airtime">
+                    <div class="card-header">
+                        <div class="network-logo airtime-logo">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                    </div>
+                    <h3 class="card-title">Airtime Top-up</h3>
+                    <p class="card-description">Instant airtime for all networks in Ghana</p>
+                    <div class="card-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>All Networks</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Instant Credit</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Bulk Purchase</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openServiceModal('airtime')">
+                        <span>Buy Airtime</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card" data-network="exam">
+                    <div class="card-header">
+                        <div class="network-logo exam-logo">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <h3 class="card-title">Exam Results</h3>
+                    <p class="card-description">WAEC, BECE, and other examination result checking</p>
+                    <div class="card-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>WAEC Results</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>BECE Results</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Instant Access</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openServiceModal('exam')">
+                        <span>Check Results</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="features-text">
+                    <div class="section-badge">Why Choose Us</div>
+                    <h2 class="section-title">Premium Experience Guaranteed</h2>
+                    <p class="section-description">
+                        We provide the most reliable and fastest digital services in Ghana with 24/7 support
+                    </p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Instant Delivery</h4>
+                                <p>Get your data bundles activated within seconds of payment</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Secure Payments</h4>
+                                <p>Bank-level security with multiple payment options</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>24/7 Support</h4>
+                                <p>Round-the-clock customer support via WhatsApp and phone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-visual">
+                    <div class="feature-cards">
+                        <div class="feature-card card-floating">
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Lightning Fast</h4>
+                            <p>2-second activation</p>
+                        </div>
+                        <div class="feature-card card-floating">
+                            <div class="card-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4>Premium Quality</h4>
+                            <p>99.9% success rate</p>
+                        </div>
+                        <div class="feature-card card-floating">
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Trusted by 50K+</h4>
+                            <p>Happy customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: GH₵<span id="cart-total">0.00</span></span>
+            </div>
+            <button class="btn btn-primary btn-full" id="checkout-btn" disabled>
+                <span>Proceed to Checkout</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="service-modal" id="service-modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Select Package</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modal-content">
+             
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="checkout-overlay">
+        <div class="checkout-modal" id="checkout-modal">
+            <div class="modal-header">
+                <h3>Complete Your Order</h3>
+                <button class="modal-close" id="checkout-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="checkout-content">
+                <div class="checkout-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Contact Info</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Confirmation</span>
+                    </div>
+                </div>
+                
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-step active" data-step="1">
+                        <h4>Contact Information</h4>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="0XX XXX XXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">
+                            Continue to Payment
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="form-step" data-step="2">
+                        <h4>Payment Method</h4>
+                        <div class="payment-methods">
+                            <div class="payment-method active" data-method="momo">
+                                <div class="method-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h5>Mobile Money</h5>
+                                    <p>MTN, AirtelTigo, Telecel</p>
+                                </div>
+                                <div class="method-radio">
+                                    <input type="radio" name="payment" value="momo" checked>
+                                </div>
+                            </div>
+                            <div class="payment-method" data-method="card">
+                                <div class="method-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h5>Credit/Debit Card</h5>
+                                    <p>Visa, Mastercard</p>
+                                </div>
+                                <div class="method-radio">
+                                    <input type="radio" name="payment" value="card">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                <i class="fas fa-arrow-left"></i>
+                                Back
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="processPayment()">
+                                Process Payment
+                                <i class="fas fa-lock"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" data-step="3">
+                        <div class="success-message">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h4>Order Successful!</h4>
+                            <p>Your data bundle has been activated successfully.</p>
+                            <div class="order-details" id="order-details">
+                    
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="closeCheckout()">
+                                Continue Shopping
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="brand-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <span class="brand-text">FreedataGH Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Ghana's premier digital services platform providing instant data bundles, 
+                        airtime, and streaming subscriptions with unmatched reliability.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">MTN Data Bundles</a></li>
+                        <li><a href="#">AirtelTigo Packages</a></li>
+                        <li><a href="#">Telecel Data</a></li>
+                        <li><a href="#">Airtime Top-up</a></li>
+                        <li><a href="#">Streaming Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">WhatsApp Support</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+233 XX XXX XXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@freedatagh.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 FreedataGH Pro. </p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification-container" id="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
